@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>공업설계입문</title>
+    </head>
+    <body>
+    
+        이름 : {{name}} 학번: {{student_id}} 학과 : {{carrer}} <br>
+
+        {% if year >= 2000 %}
+            <h1>{{year-2000}}번 입니다.</h1>
+        {% else %}
+            <h1>고학번입니다.</h1>
+        {% endif %}
+
+
+    </body>
+</html>
+
