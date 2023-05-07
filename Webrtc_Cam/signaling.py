@@ -10,12 +10,12 @@ data = {}
 def ok():
     return Response('{"status":"ok"}', status=200, mimetype='application/json')
 
-@app.route('/test', methods=['POST','GET'])
+@app.route('/class', methods=['POST','GET'])
 def test():
     name = "김자용"
     carrer = "컴퓨터공학과"
-    student_id = "20181612"
-    year = 2018
+    student_id = "20231612"
+    year = 2023
     a ,b = 65 ,5
     return render_template('sample.html',a = a, name=name, b=b, student_id = student_id, carrer = carrer, year = year)
 
