@@ -16,10 +16,10 @@ def ok():
 ## --------------------------------------------------------------------------------------------
 @app.route('/class', methods=['POST','GET'])
 def test():
-    name = "김자용"
-    carrer = "컴퓨터공학과"
-    student_id = "20231612"
-    year = 2023
+    name = ""
+    carrer = ""
+    student_id = ""
+    year = 
     return render_template('sample.html',student_id = student_id, carrer = carrer, year = year)
 
 ## --------------------------------------------------------------------------------------------------
