@@ -10,7 +10,7 @@ https://github.com/jayong1011/2023_WebRTC/tree/main/Webrtc_Cam
 
 
 # [개인] 실습(환경세팅) #
-1. 터미널 접속 후 명령어 입력 git clone https://github.com/jayong1011/2023_WebRTC/tree/main/Webrtc_Cam   
+1. 터미널 접속 후 명령어 입력 git clone https://github.com/jayong1011/2023_WebRTC
    
    1. ![terminal](/image/img1.png) 옆에 그림에서 cd Desktop 입력
    2. ![terminal](image/img2.png ) 왼쪽 그림처럼 바탕화면 경로에서 git clone 명령어 실행
@@ -35,7 +35,7 @@ https://github.com/jayong1011/2023_WebRTC/tree/main/Webrtc_Cam
 1. 서버 동작확인
   - 크롬에서 주소창에 localhost:8080 입력 
   - Status : ok 나오면 정상 실행 
-- 
+
 1. 실습 진행
    - signaling.py 파일에 표시한 부분 코드 작성
    - template/sample.html 파일에서 예시 그림처럼 나올 수 있도록 조건문 알고리즘 작성
