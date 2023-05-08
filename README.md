@@ -49,7 +49,7 @@
 
 
   - 크롬에서 주소창에 localhost:8080/class 입력 
-  - ![result](image/img12.png) 실행 결과 확인
+  - ![result](image/img12.png) <br>실행 결과 확인
 
 
 2. 실습1 진행
