@@ -36,6 +36,8 @@
    4. ![terminal4](image/img10.png) 명령어 입력
    
    5. ![termainal5](image/img11.png) 명령어 입력
+
+   6. ![terminal](imag/../image/img17.png) 명령어 입력
    
 
 # 실습1 [서버 동작 및 결과예시] #
