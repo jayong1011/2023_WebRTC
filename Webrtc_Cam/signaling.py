@@ -11,16 +11,16 @@ def ok():
     return Response('{"status":"ok"}', status=200, mimetype='application/json')
 
 
-##변수값 수정
-
+##실습 1
+## 자신의 이름과 학번 학과 입학년도 입력
 ## --------------------------------------------------------------------------------------------
 @app.route('/class', methods=['POST','GET'])
 def test():
-    name = ""
-    carrer = ""
-    student_id = ""
-    year = 
-    return render_template('sample.html',student_id = student_id, carrer = carrer, year = year)
+    name = "홍길동"  # 이름   
+    career = "정보통신공학과"  # 학과
+    student_id = "20181612" # 학번
+    year =  2018   # 입학년도
+    return render_template('sample.html',student_id = student_id, career = career, year = year, name = name)
 
 ## --------------------------------------------------------------------------------------------------
 
