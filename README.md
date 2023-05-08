@@ -10,7 +10,7 @@ https://github.com/jayong1011/2023_WebRTC/tree/main/Webrtc_Cam
 
 
 # [개인] 실습(환경세팅) #
-1. 터미널 접속 후 명령어 입력 git clone https://github.com/jayong1011/2023_WebRTC/tree/main/Webrtc_Cam   
+1. 터미널 접속 후 명령어 입력 git clone https://github.com/jayong1011/2023_WebRTC
    
    1. ![terminal](/image/img1.png) 옆에 그림에서 cd Desktop 입력
    2. ![terminal](image/img2.png ) 왼쪽 그림처럼 바탕화면 경로에서 git clone 명령어 실행
