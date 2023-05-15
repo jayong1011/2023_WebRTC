@@ -49,14 +49,14 @@
 
 
   - 크롬에서 주소창에 localhost:8080/class 입력 
-  - ![result](image/img12.png) 실행 결과 확인
+  - ![result](image/img12.png) <br>(실행 결과 확인)
 
 
 2. 실습1 진행
    - signaling.py 파일에 표시한 부분 코드 수정
    - ![result](image/img20.png)
    - 수정하고 저장 url창 새로고침 후 결과 확인
-  ㄴ
+  
 3. 실습2 진행
    - sample.html 파일에서 표시한 부분 코드 수정하여 아래 결과예시의 그림처럼 자신의 학번을 출력
    - ![result](image/img14.png)
