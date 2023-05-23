@@ -6,12 +6,23 @@ import cv2
 import numpy as np
 import socket
 import json
+import pygame
 from config import *
 
 
 ID = "answerer01"
 
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+# 소리출력
+pygame.mixer.init()
+
+notification_sound = pygame.mixer.Sound('sample.mp3')
+
+
+# 사람인식
+
+hog = cv2.HOGDescriptor()
+hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
+
 
 
 
@@ -35,6 +46,17 @@ async def main():
 
     
             image = cv2.imdecode(buf, cv2.IMREAD_COLOR)
+            
+
+            boxes, weights = hog.detectMultiScale(image, winStride=(8,8) )
+            
+            boxes = np.array([[x, y, x + w, y + h] for (x, y, w, h) in boxes])
+            
+            for (xA, yA, xB, yB) in boxes:
+                # display the detected boxes in the colour picture
+                cv2.rectangle(image, (xA, yA), (xB, yB), (0, 255, 0), 2)
+                notification_sound.play()
+            
 
             cv2.imshow('image', image)
             
