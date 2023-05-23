@@ -59,7 +59,7 @@ async def main():
     r = requests.post(SIGNALING_SERVER_URL + '/offer', data = message)
     print(r.status_code)
 
-    #데이터 전송
+   
     while True:
         resp = requests.get(SIGNALING_SERVER_URL + "/get_answer")
         if resp.status_code == 503:

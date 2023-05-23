@@ -27,8 +27,8 @@ async def main():
 
     @peer_connection.on("datachannel")
     def on_datachannel(channel):
-        
-        channel.send("Hello From Answerer via RTC Datachannel")
+
+        channel.send("데이터 채널 오픈")
         
         @channel.on("message")
         async def on_message(message):
@@ -47,11 +47,10 @@ async def main():
             
             # 사람 인식했을 때 경계박스 출력
             for (xA, yA, xB, yB) in boxes:
-                
                 cv2.rectangle(image, (xA, yA), (xB, yB), (0, 255, 0), 2)
                 # 알림을 발생
                 notification_sound.play()
-                
+
             
             cv2.imshow('image', image)
             
