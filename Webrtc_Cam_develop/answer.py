@@ -12,19 +12,12 @@ from config import *
 
 ID = "answerer01"
 
-# 소리출력
+
 pygame.mixer.init()
-
 notification_sound = pygame.mixer.Sound('sample.mp3')
-
-
-# 사람인식
 
 hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
-
-
-
 
 async def main():
     
@@ -52,12 +45,14 @@ async def main():
             
             boxes = np.array([[x, y, x + w, y + h] for (x, y, w, h) in boxes])
             
+            # 사람 인식했을 때 경계박스 출력
             for (xA, yA, xB, yB) in boxes:
-                # display the detected boxes in the colour picture
+                
                 cv2.rectangle(image, (xA, yA), (xB, yB), (0, 255, 0), 2)
+                # 알림을 발생
                 notification_sound.play()
+                
             
-
             cv2.imshow('image', image)
             
             cv2.waitKey(1)
