@@ -1,0 +1,4 @@
+SIGNALING_SERVER_URL = 'http://172.20.10.4:8000'
+HOST = "172.20.10.4"
+SOCKET = "localhost"
+PORT = 12345
