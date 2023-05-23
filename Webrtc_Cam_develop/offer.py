@@ -10,7 +10,6 @@ import os
 
 
 ID = "offerer01"
-# os.environ["OPENCV_FFMPEG_CAPTURE_OPTIONS"] = "dummy"
 
 
 async def main():
@@ -22,7 +21,7 @@ async def main():
     
     
     async def send_video():
-        # cap = cv2.VideoCapture("rtsp://192.168.50.119:8554/live?resolution=1920x960")
+     
         cap = cv2.VideoCapture(0)
         
         while True:
@@ -55,7 +54,8 @@ async def main():
         
 
     await peer_connection.setLocalDescription(await peer_connection.createOffer())
-    message = {"id": ID, "sdp" : peer_connection.localDescription.sdp, "type" : peer_connection.localDescription.type}
+    message = {"id": ID, "sdp" : peer_connection.localDescription.sdp, 
+               "type" : peer_connection.localDescription.type}
     r = requests.post(SIGNALING_SERVER_URL + '/offer', data = message)
     print(r.status_code)
 
