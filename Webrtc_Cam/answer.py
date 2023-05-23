@@ -16,39 +16,24 @@ async def main():
     peer_connection = RTCPeerConnection()
     
     
-    async def send_pings(channel):
-        num = 0
-        while True:
-            msg = "From Answer: {}".format(num)
-            # print("Sending cia RTC Datachannel: ", msg)
-            channel.send(msg)
-            num+=1
-            await asyncio.sleep(1)
-            
-
     @peer_connection.on("datachannel")
     def on_datachannel(channel):
         print(channel, "-", "created by remote party")
         channel.send("Hello From Answerer via RTC Datachannel")
         @channel.on("message")
         async def on_message(message):
-            # print("Recevied via RTC Datachannel:" , message)
-            # Assuming that `img_str` contains the base64 encoded string
+      
+      
             binary_data = base64.b64decode(message)
 
-            # Convert the binary data to a NumPy array
             buf = np.frombuffer(binary_data, np.uint8)
 
-            # Decode the image from the array using OpenCV
             image = cv2.imdecode(buf, cv2.IMREAD_UNCHANGED)
 
-            # Show the image
+            #화면 출력
             cv2.imshow('image', image)
             cv2.waitKey(1)
            
-
-            
-        asyncio.ensure_future(send_pings(channel))
         
     resp = requests.get(SIGNALING_SERVER_URL + "/get_offer")
     

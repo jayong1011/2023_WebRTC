@@ -21,8 +21,6 @@ async def main():
     channel = peer_connection.createDataChannel("video")
     
     
-    
-    
     async def send_video():
         # cap = cv2.VideoCapture("rtsp://192.168.50.119:8554/live?resolution=1920x960")
         cap = cv2.VideoCapture(0)
@@ -32,7 +30,7 @@ async def main():
             ret, frame = cap.read(0)
             
             #해상도 줄여서 데이터 크기 축소(화질떨어짐)
-            frame = cv2.resize(frame,(360, 240))
+            frame = cv2.resize(frame,(720, 480))
             
             if not ret :
                 break
@@ -44,8 +42,7 @@ async def main():
             
             # print(len(buffer))
             img_str = base64.b64encode(buffer).decode('utf-8')
-        
-            ###
+
             
             channel.send(img_str)
                         
