@@ -57,7 +57,7 @@ async def main():
                     cv2.rectangle(image, (xA, yA), (xB, yB), (0, 255, 0), 2)
                     # 알림을 발생
                     notification_sound.play()
-                    
+  
 
                 cv2.imshow('image', image)
                 
