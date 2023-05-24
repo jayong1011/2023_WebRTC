@@ -32,11 +32,10 @@ async def main():
         async def on_message(message):
             
             # pir 센서 신호오면 소리 출력
-            if message == "test":
-                print("find!!!")
+            if message == "find":
+                print("Motion_Find!!!")
+
                 
-            
-            
             # 영상 데이터 바이너리 형태로 오면 인코딩해서 영상 출력
             else:
                 binary_data = base64.b64decode(message)
