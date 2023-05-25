@@ -30,13 +30,9 @@ async def main():
             # 조건문 통해서 센서 감지하고 text 전송
         
             channel.send("test")
-            
-            
-            
+        
             # -------------------------------------------------
-            
-            
-            
+    
             
             ret, frame = cap.read(0)
             
