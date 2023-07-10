@@ -28,7 +28,7 @@ async def main():
             
             
             # 조건문 통해서 센서 감지하고 text 전송
-            channel.send("find")
+            # channel.send("find")
             
             
             # -------------------------------------------------
@@ -36,7 +36,7 @@ async def main():
             ret, frame = cap.read(0)
             
             #해상도 줄여서 데이터 크기 축소(화질떨어짐)
-            frame = cv2.resize(frame,(360, 240))
+            frame = cv2.resize(frame,(640, 480))
             
             if not ret :
                 break
