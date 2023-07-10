@@ -32,10 +32,16 @@ async def main():
         async def on_message(message):
             
             # pir 센서 신호오면 소리 출력
+<<<<<<< HEAD
             # if message == "find":
             #     print("Motion_Find!!!")
 
+=======
+            # if message == "test":
+            #     print("find!!!")
+>>>>>>> b971adddb4ddff0d473ea4e2d2aa4a369ebb87de
                 
+            
             # 영상 데이터 바이너리 형태로 오면 인코딩해서 영상 출력
             binary_data = base64.b64decode(message)
                     
@@ -55,7 +61,11 @@ async def main():
                 cv2.rectangle(image, (xA, yA), (xB, yB), (0, 255, 0), 2)
                 # 알림을 발생
                 notification_sound.play()
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> b971adddb4ddff0d473ea4e2d2aa4a369ebb87de
 
             cv2.imshow('image', image)
             
