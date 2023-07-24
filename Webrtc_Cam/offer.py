@@ -32,6 +32,8 @@ async def main():
             channel.send(img_str)
             
             await asyncio.sleep(0.045)
+    
+    
 
     @channel.on("open")
     def on_open():
